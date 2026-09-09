@@ -9,6 +9,7 @@ body {
   font-size: 0.875rem;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
+  color: #695656;
 }
 
 ul {
@@ -41,6 +42,11 @@ a {
   width: calc(100% - 60px);
   max-width: 1000px;
   margin-inline: auto;
+}
+
+section {
+  scroll-margin-top: 100px;
+  /* 固定ヘッダーの高さ */
 }
 
 /*header*/
@@ -197,7 +203,6 @@ header::after {
 #trial {
   position: relative;
   max-width: 1220px;
-  /* min-height: 420px; */
   margin: 80px auto 40px;
   background-color: #FFFDFC;
   border-radius: 50px;
@@ -517,6 +522,10 @@ header::after {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+}
+
+.quality-card-text {
+  font-size: 18px;
 }
 
 .quality-card-reverse {
@@ -843,6 +852,10 @@ header::after {
   padding: 10px 0 10px 20px;
 }
 
+input {
+  font-size: 16px;
+}
+
 .privacy-check {
   display: flex;
   justify-content: center;
@@ -920,6 +933,13 @@ footer img {
   height: 60px;
 }
 
+/* フェードイン */
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
 
 
 @media (max-width: 1170px) {
@@ -943,6 +963,18 @@ footer img {
   }
 
 
+}
+
+
+
+@media (max-width: 1100px) {
+  .trial-img {
+    top: -22%;
+  }
+
+  .trial-text {
+    width: 45%;
+  }
 }
 
 
@@ -1608,6 +1640,11 @@ footer img {
 
     .contact-table {
       border-spacing: 0;
+    }
+
+    /* 500 footer */
+    .footer-list li a {
+      font-size: 18px;
     }
 
 
