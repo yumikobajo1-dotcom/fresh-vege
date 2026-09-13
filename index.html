@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -31,12 +31,13 @@
                     <li><a href="#form">お申込み</a></li>
                 </ul>
             </nav>
-        </div>
 
-        <div class="toggle_btn">
-            <span></span>
-            <span></span>
-            <span></span>
+
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
 
         <div class="mask"></div>
@@ -200,7 +201,7 @@
                 </li>
             </ul>
 
-            <div class="cta-ctn-lg">
+            <div class="cta-btn-lg">
                 <a href="#" class="cta-btn">今<span class="cta-btn-sm">すぐ</span>お試しパック<span
                         class="cta-btn-sm">を</span>申し込む</a>
             </div>
@@ -247,6 +248,10 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="cta-btn-lg">
+                <a href="#" class="cta-btn">今<span class="cta-btn-sm">すぐ</span>お試しパック<span
+                        class="cta-btn-sm">を</span>申し込む</a>
             </div>
         </section>
 
@@ -350,7 +355,7 @@
 
 
 
-            <form action="contact-form" class="contact-form">
+            <form action="contact-form" class="contact-form" id="contact-form">
                 <h3>お申し込みフォーム</h3>
 
                 <table class="contact-table">
@@ -402,7 +407,7 @@
                     <a href="privacy.html" class="privacypolicy">「プライバシーポリシー」に同意する</a>
                 </label>
 
-                <div class="cta-ctn-lg">
+                <div class="cta-btn-lg">
                     <a href="#" class="cta-btn">お試しパック<span class="cta-btn-sm">を</span>申し込む</a>
                 </div>
             </form>
