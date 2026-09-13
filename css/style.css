@@ -650,6 +650,23 @@ header::after {
   padding: 160px 20px 50px 20px;
 }
 
+@media (min-width: 768px) {
+
+  .message-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px 0 0 30px;
+  }
+
+  .message-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .message-title {
   display: flex;
   align-items: center;
@@ -1012,636 +1029,667 @@ footer img {
   }
 }
 
+@media (max-width: 1000px) {
+  #trial .cta-btn {
+    width: auto;
+  }
+}
 
-
-@media (max-width: 767px) {
-
-  /* wrapper */
-  .wrapper {
-    width: calc(100% - 40px);
+@media (max-width: 900px) {
+  #trial .cta-btn {
+    font-size: 22px;
+    width: 400px;
   }
 
-  /* inner */
-  .inner {
-    width: calc(100% - 40px);
+  #trial .cta-btn-sm {
+    font-size: 16px;
   }
 
-  /* header */
-
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  #trial .cta-btn::after {
+    width: 23px;
+    height: 23px;
+    margin-left: 2px;
   }
 
-  header::after {
-    z-index: 1001;
+  @media (max-width: 850px) {
+    .form-trial-img img {
+      /* position: absolute; */
+      /* width: 50%; */
+      /* max-width: 270px; */
+      left: -6%;
+      top: -38%;
+      z-index: 2;
+    }
   }
 
-  .toggle_btn {
-    z-index: 1002;
-  }
+  @media (max-width: 767px) {
 
-  .site-title {
-    display: block;
-  }
+    /* wrapper */
+    .wrapper {
+      width: calc(100% - 40px);
+    }
 
-  .toggle_btn {
-    display: block;
-  }
+    /* inner */
+    .inner {
+      width: calc(100% - 40px);
+    }
 
-  .mask {
-    display: block;
-  }
+    /* header */
 
-  /*
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header::after {
+      z-index: 1001;
+    }
+
+    .toggle_btn {
+      z-index: 1002;
+    }
+
+    .site-title {
+      display: block;
+    }
+
+    .toggle_btn {
+      display: block;
+    }
+
+    .mask {
+      display: block;
+    }
+
+    /*
 ハンバーガーメニュー
 メニューが閉じている時は、「left: -300px;」で画面左に隠し、
 「opacity: 0;」で非表示にしている
 */
-  nav {
-    position: fixed;
-    top: 100px;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    padding: 140px 60px 40px;
-    transition: all 0.5s;
-    z-index: 20;
-    opacity: 0;
-    box-sizing: border-box;
-  }
+    nav {
+      position: fixed;
+      top: 100px;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      padding: 140px 60px 40px;
+      transition: all 0.5s;
+      z-index: 20;
+      opacity: 0;
+      box-sizing: border-box;
+    }
 
-  nav a {
-    color: #FAF8F3;
-  }
+    nav a {
+      color: #FAF8F3;
+    }
 
-  nav li {
-    margin-bottom: 14px;
-  }
+    nav li {
+      margin-bottom: 14px;
+    }
 
-  /*
+    /*
 ハンバーガーメニュー
 */
-  .open nav {
-    display: block;
-    left: 0;
-    /* right: 0; */
-    /* margin-inline: auto; */
-    opacity: 1;
-  }
+    .open nav {
+      display: block;
+      left: 0;
+      /* right: 0; */
+      /* margin-inline: auto; */
+      opacity: 1;
+    }
 
-  .open .nav-list {
-    flex-direction: column;
-    text-align: left;
-    padding: 50px 0 0 30px;
-  }
+    .open .nav-list {
+      flex-direction: column;
+      text-align: left;
+      padding: 50px 0 0 30px;
+    }
 
-  .open .nav-list li {
-    margin-left: 0;
-    font-size: 22px;
-    margin-bottom: 32px;
-  }
+    .open .nav-list li {
+      margin-left: 0;
+      font-size: 22px;
+      margin-bottom: 32px;
+    }
 
-  .toggle_btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1002;
-  }
+    .toggle_btn {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 1002;
+    }
 
 
-  /*
+    /*
 ハンバーガーメニューの線の設定（メニューが閉じている時）
 */
-  .toggle_btn span {
-    /* spanはインライン要素のため */
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #4F6F52;
-    transition: .5s;
-    position: absolute;
-    /*対象*/
-  }
+    .toggle_btn span {
+      /* spanはインライン要素のため */
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #4F6F52;
+      transition: .5s;
+      position: absolute;
+      /*対象*/
+    }
 
-  /*
+    /*
 1本目の線の位置を設定
 */
-  .toggle_btn span:nth-child(1) {
-    top: 10px;
-  }
+    .toggle_btn span:nth-child(1) {
+      top: 10px;
+    }
 
-  /*
+    /*
 2本目の線の位置を設定
 */
-  .toggle_btn span:nth-child(2) {
-    top: 18px;
-  }
+    .toggle_btn span:nth-child(2) {
+      top: 18px;
+    }
 
-  /*
+    /*
 3本目の線の位置を設定
 */
-  .toggle_btn span:nth-child(3) {
-    top: 26px;
-  }
+    .toggle_btn span:nth-child(3) {
+      top: 26px;
+    }
 
-  /*
+    /*
 ハンバーガーメニューの線の設定（メニューが開いている時）
 線の色を緑に変更
 */
-  .open .toggle_btn span {
-    background-color: #4F6F52;
-  }
+    .open .toggle_btn span {
+      background-color: #4F6F52;
+    }
 
-  /*
+    /*
 1本目の線を-45度回転
 */
-  .open .toggle_btn span:nth-child(1) {
-    top: 19px;
-    transform: rotate(-45deg);
-  }
+    .open .toggle_btn span:nth-child(1) {
+      top: 19px;
+      transform: rotate(-45deg);
+    }
 
-  /*
+    /*
 2本目の線を45度回転
 */
-  .open .toggle_btn span:nth-child(2) {
-    opacity: 0;
-  }
+    .open .toggle_btn span:nth-child(2) {
+      opacity: 0;
+    }
 
-  /*
+    /*
 3本目の線を45度回転
 */
-  .open .toggle_btn span:nth-child(3) {
-    top: 19px;
-    transform: rotate(45deg);
-  }
+    .open .toggle_btn span:nth-child(3) {
+      top: 19px;
+      transform: rotate(45deg);
+    }
 
-  .mask {
-    display: none;
-    transition: .5s;
-  }
+    .mask {
+      display: none;
+      transition: .5s;
+    }
 
-  /*
+    /*
 メニューを開いている時は、全体を白背景にする
 */
-  .open .mask {
-    display: block;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 20%);
-    background: #FAF8F3;
-    z-index: 10;
-    cursor: pointer;
-    opacity: 0.9;
-    border-radius: 0 0 30px 30px;
-  }
-
-  /* fv-cta-btn */
-  .fv-cta-btn,
-  .cta-btn {
-    font-size: 18px;
-    padding: 8px 30px;
-  }
-
-  .cta-btn::after {
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-    margin: 6px 0 0 16px;
-  }
-
-  .cta-btn-sm {
-    font-size: 14px;
-  }
-
-  /* concept */
-
-  .concept-text1,
-  .concept-text2 {
-    font-size: 22px;
-  }
-
-  .concept-img img {
-    width: 100%;
-  }
-
-  .sp-br {
-    display: block;
-  }
-
-  /* trial */
-
-  #trial {
-    display: flex;
-    flex-direction: column;
-    margin-block: 0;
-  }
-
-  #trial {
-    max-width: 480px;
-    height: auto;
-  }
-
-  .trial-img {
-    position: static;
-    width: 100%;
-    z-index: 2;
-  }
-
-  .trial-text {
-    width: 90%;
-    max-width: 500px;
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  .trial-text-comment {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  #trial .cta-btn {
-    font-size: 18px;
-  }
-
-  #trial .cta-btn-sm {
-    font-size: 14px;
-  }
-
-  /* delivery */
-
-  #delivery {
-    margin-top: 80px;
-  }
-
-  .section-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .delivery-card {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0;
-  }
-
-  .delivery-card li:not(:last-child)::after {
-    top: auto;
-    right: auto;
-    left: 50%;
-    bottom: -30px;
-    transform: translateX(-50%) rotate(90deg);
-  }
-
-  .delivery-card li {
-    position: relative;
-    width: 85%;
-    max-width: 420px;
-    margin-inline: auto;
-    margin-bottom: 40px;
-    padding-block: 30px;
-  }
-
-  .card-bottom img {
-    width: 280px;
-  }
-
-  .card-bottom p {
-    padding-inline: 30px;
-  }
-
-  .card-title {
-    font-size: 28px;
-    color: #695656;
-    margin-block: 25px;
-    text-align: center;
-    border-bottom: 0;
-  }
-
-  .card-title::after {
-    content: "";
-    display: block;
-    width: 230px;
-    height: 1px;
-    background-color: #7EA86C;
-    margin: 16px auto 0;
-  }
-
-  /* quality */
-
-  #quality {
-    padding-top: 80px;
-  }
-
-  .section-sub-title {
-    font-size: 18px;
-  }
-
-  .quality-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .quality-img,
-  .quality-text {
-    width: 95%;
-  }
-
-  .quality-img img {
-    border-radius: 30px 30px 0 0;
-  }
-
-  .quality-text {
-    font-size: 18px;
-    padding: 15px 50px 30px;
-    margin-inline: auto;
-    border-radius: 0 0 30px 30px;
-  }
-
-  .quality-card-reverse {
-    flex-direction: column-reverse;
-    padding: 0;
-  }
-
-  .quality-card-reverse .quality-img img {
-    border-radius: 0 0 30px 30px;
-  }
-
-  .quality-card-reverse .quality-text {
-    border-radius: 30px 30px 0 0;
-  }
-
-  .quality-card:not(.quality-card-reverse)::after {
-    display: none;
-  }
-
-  #quality .cta-btn-lg {
-    display: block;
-    margin-top: 40px;
-  }
-
-  /* three-reasons-card */
-
-  .three-reasons-card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .three-reasons-card li {
-    width: 100%;
-    display: flex;
-    margin-bottom: 30px;
-  }
-
-  .three-reasons-card-text {
-    width: 70%;
-    margin-block: 32px;
-  }
-
-  .three-reasons-card-title {
-    border-bottom: 0;
-    padding-bottom: 24px;
-  }
-
-  .three-reasons-card-title::before {
-    display: none;
-  }
-
-  .three-reasons-card-title::after {
-    content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background-color: #695656;
-    margin: 16px auto 0;
-  }
-
-  /* message */
-  #message {
-    padding-block: 0 80px;
-  }
-
-  .message-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 30px;
-  }
-
-  .message-img,
-  .message-text-box {
-    width: 100%;
-  }
-
-  .message-img img {
-    width: 100%;
-    border-radius: 30px 30px 0 0;
-  }
-
-  .message-text-box {
-    padding-inline: 60px;
-    box-sizing: border-box;
-    border-radius: 0 0 30px 30px;
-  }
-
-  .message-title,
-  .message-text {
-    max-width: 100%;
-  }
-
-  .message-text {
-    font-size: 24px;
-  }
-
-  /* form */
-
-  .form-inner {
-    text-align: center;
-    margin-inline: auto;
-    max-width: 450px;
-  }
-
-  .form-trial-text-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .form-trial-price-inner {
-    margin-block: 8px;
-  }
-
-  .form-trial-price-point {
-    display: flex;
-    justify-content: center;
-  }
-
-  .form-price {
-    display: flex;
-    margin-block: 10px;
-  }
-
-  .form-trial-text-comment {
-    text-align: center;
-    margin: 0;
-  }
-
-  .form-trial-img {
-    text-align: center;
-  }
-
-  .form-trial-img img {
-    position: static;
-    width: 100%;
-    max-width: 380px;
-  }
-
-  .form-subtitle {
-    text-align: left;
-  }
-
-  /* contact-form */
-
-  .contact-form {
-    width: 100%;
-  }
-
-  .contact-table {
-    width: 90%;
-    margin-inline: auto;
-  }
-
-  .contact-table tr {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 32px;
-  }
-
-  .contact-item {
-    width: 100%;
-    text-align: left;
-  }
-
-  .contact-body {
-    width: 100%;
-  }
-
-  .cta-btn-lg {
-    display: block;
-  }
-
+    .open .mask {
+      display: block;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 20%);
+      background: #FAF8F3;
+      z-index: 10;
+      cursor: pointer;
+      opacity: 0.9;
+      border-radius: 0 0 30px 30px;
+    }
+
+    /* fv-cta-btn */
+    .fv-cta-btn,
+    .cta-btn {
+      font-size: 18px;
+      padding: 8px 30px;
+    }
+
+    .cta-btn::after {
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      margin: 6px 0 0 16px;
+    }
+
+    .cta-btn-sm {
+      font-size: 14px;
+    }
+
+    /* concept */
+
+    .concept-text1,
+    .concept-text2 {
+      font-size: 22px;
+    }
+
+    .concept-img img {
+      width: 100%;
+    }
+
+    .sp-br {
+      display: block;
+    }
+
+    /* trial */
+
+    #trial {
+      display: flex;
+      flex-direction: column;
+      margin-block: 0;
+    }
+
+    #trial {
+      max-width: 480px;
+      height: auto;
+    }
+
+    .trial-img {
+      position: static;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .trial-text {
+      width: 90%;
+      max-width: 500px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .trial-text-comment {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #trial .cta-btn {
+      font-size: 18px;
+    }
+
+    #trial .cta-btn-sm {
+      font-size: 14px;
+    }
+
+    /* delivery */
+
+    #delivery {
+      margin-top: 80px;
+    }
+
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .delivery-card {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0;
+    }
+
+    .delivery-card li:not(:last-child)::after {
+      top: auto;
+      right: auto;
+      left: 50%;
+      bottom: -30px;
+      transform: translateX(-50%) rotate(90deg);
+    }
+
+    .delivery-card li {
+      position: relative;
+      width: 85%;
+      max-width: 420px;
+      margin-inline: auto;
+      margin-bottom: 40px;
+      padding-block: 30px;
+    }
+
+    .card-bottom img {
+      width: 280px;
+    }
+
+    .card-bottom p {
+      padding-inline: 30px;
+    }
+
+    .card-title {
+      font-size: 28px;
+      color: #695656;
+      margin-block: 25px;
+      text-align: center;
+      border-bottom: 0;
+    }
+
+    .card-title::after {
+      content: "";
+      display: block;
+      width: 230px;
+      height: 1px;
+      background-color: #7EA86C;
+      margin: 16px auto 0;
+    }
+
+    /* quality */
+
+    #quality {
+      padding-top: 80px;
+    }
+
+    .section-sub-title {
+      font-size: 18px;
+    }
+
+    .quality-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quality-img,
+    .quality-text {
+      width: 95%;
+    }
+
+    .quality-img img {
+      border-radius: 30px 30px 0 0;
+    }
+
+    .quality-text {
+      font-size: 18px;
+      padding: 15px 50px 30px;
+      margin-inline: auto;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .quality-card-reverse {
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+
+    .quality-card-reverse .quality-img img {
+      border-radius: 0 0 30px 30px;
+    }
+
+    .quality-card-reverse .quality-text {
+      border-radius: 30px 30px 0 0;
+    }
+
+    .quality-card:not(.quality-card-reverse)::after {
+      display: none;
+    }
+
+    #quality .cta-btn-lg {
+      display: block;
+      margin-top: 40px;
+    }
+
+    /* three-reasons-card */
+
+    .three-reasons-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .three-reasons-card li {
+      width: 100%;
+      display: flex;
+      margin-bottom: 30px;
+    }
+
+    .three-reasons-card-text {
+      width: 70%;
+      margin-block: 32px;
+    }
+
+    .three-reasons-card-title {
+      border-bottom: 0;
+      padding-bottom: 24px;
+    }
+
+    .three-reasons-card-title::before {
+      display: none;
+    }
+
+    .three-reasons-card-title::after {
+      content: "";
+      display: block;
+      width: 200px;
+      height: 1px;
+      background-color: #695656;
+      margin: 16px auto 0;
+    }
+
+    /* message */
+    #message {
+      padding-block: 0 80px;
+    }
+
+    .message-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 30px;
+    }
+
+    .message-img,
+    .message-text-box {
+      width: 100%;
+    }
+
+    .message-img img {
+      width: 100%;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .message-text-box {
+      padding-inline: 60px;
+      box-sizing: border-box;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .message-title,
+    .message-text {
+      max-width: 100%;
+    }
+
+    .message-text {
+      font-size: 24px;
+    }
+
+    /* form */
+
+    .form-inner {
+      text-align: center;
+      margin-inline: auto;
+      max-width: 450px;
+    }
+
+    .form-trial-text-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .form-trial-price-inner {
+      margin-block: 8px;
+    }
+
+    .form-trial-price-point {
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-price {
+      display: flex;
+      margin-block: 10px;
+    }
+
+    .form-trial-text-comment {
+      text-align: center;
+      margin: 0;
+    }
+
+    .form-trial-img {
+      text-align: center;
+    }
+
+    .form-trial-img img {
+      position: static;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .form-subtitle {
+      text-align: left;
+    }
+
+    /* contact-form */
+
+    .contact-form {
+      width: 100%;
+    }
+
+    .contact-table {
+      width: 90%;
+      margin-inline: auto;
+    }
+
+    .contact-table tr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+
+    .contact-item {
+      width: 100%;
+      text-align: left;
+    }
+
+    .contact-body {
+      width: 100%;
+    }
+
+    .cta-btn-lg {
+      display: block;
+    }
+
+
+    /* footer */
+
+    footer {
+      text-align: left;
+      padding-inline: 30px;
+    }
+
+    .footer-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-list li {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+
+    /* 500 fv */
+    #fv .text-md {
+      font-size: 24px;
+    }
+
+    #fv .text-sm {
+      font-size: 20px;
+    }
+
+    #fv .text-lg {
+      font-size: 28px;
+    }
+
+    /* 500 concept */
+    .concept-img img {
+      width: 100%;
+    }
+
+    .concept-text1,
+    .concept-text2 {
+      font-weight: normal;
+    }
+
+    /* 500 message */
+    .message-text-box {
+      padding: 80px 20px 30px;
+    }
+
+    .message-text {
+      font-size: 18px;
+    }
+
+    /* 500 form */
+    /* form */
+    #form {
+      padding: 60px 20px;
+    }
+
+    .form-trial-text-box {
+      margin-right: 0;
+    }
+
+    .form-trial-title {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .form-trial-price-inner {
+      flex-direction: column;
+      margin-block: 0;
+    }
+
+    .form-trial-price-point {
+      flex-direction: row;
+    }
+
+    .form-trial-text-comment {
+      margin-top: 28px;
+    }
+
+    .form-subtitle {
+      font-weight: normal;
+    }
+
+    /* 500 contact-form */
+    .contact-form h3 {
+      padding-bottom: 36px;
+    }
+
+    .contact-form {
+      padding: 48px 10px 16px;
+    }
+
+    .contact-table {
+      border-spacing: 0;
+    }
+
+    /* 500 footer */
+    .footer-list li a {
+      font-size: 18px;
+    }
 
-  /* footer */
-
-  footer {
-    text-align: left;
-    padding-inline: 30px;
-  }
-
-  .footer-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-list li {
-    font-size: 24px;
-    margin-bottom: 32px;
-  }
-}
-
-
-@media (max-width: 500px) {
-
-  /* 500 fv */
-  #fv .text-md {
-    font-size: 24px;
-  }
-
-  #fv .text-sm {
-    font-size: 20px;
-  }
-
-  #fv .text-lg {
-    font-size: 28px;
-  }
-
-  /* 500 concept */
-  .concept-img img {
-    width: 100%;
-  }
-
-  .concept-text1,
-  .concept-text2 {
-    font-weight: normal;
-  }
-
-  /* 500 message */
-  .message-text-box {
-    padding: 80px 20px 30px;
-  }
-
-  .message-text {
-    font-size: 18px;
-  }
-
-  /* 500 form */
-  /* form */
-  #form {
-    padding: 60px 20px;
-  }
-
-  .form-trial-text-box {
-    margin-right: 0;
-  }
-
-  .form-trial-title {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
-
-  .form-trial-price-inner {
-    flex-direction: column;
-    margin-block: 0;
-  }
-
-  .form-trial-price-point {
-    flex-direction: row;
-  }
-
-  .form-trial-text-comment {
-    margin-top: 28px;
   }
-
-  .form-subtitle {
-    font-weight: normal;
-  }
-
-  /* 500 contact-form */
-  .contact-form h3 {
-    padding-bottom: 36px;
-  }
-
-  .contact-form {
-    padding: 48px 10px 16px;
-  }
-
-  .contact-table {
-    border-spacing: 0;
-  }
-
-  /* 500 footer */
-  .footer-list li a {
-    font-size: 18px;
-  }
-
-}
